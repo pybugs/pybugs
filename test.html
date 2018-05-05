@@ -1,0 +1,89 @@
+
+<html>
+<head>
+	<style>
+		* {
+		    box-sizing: border-box;
+		}
+
+		/* Create two equal columns that floats next to each other */
+		.column1 {
+		    float: left;
+		    width: 30%;
+		    padding: 10px;
+		    margin-left: 50px;
+		}
+
+		.column2 {
+		    float: left;
+		    width: 30%;
+		    padding: 10px;
+		    margin-left: 5px;
+		}
+		.column3 {
+		    float: right;
+		    width: 30%;
+		    padding: 10px;
+		    margin-left: 5px;
+		    margin-right: 50px;
+		}
+
+		/* Clear floats after the columns */
+		.row:after {
+		    content: "";
+		    display: table;
+		    clear: both;
+		}
+
+		.labels{
+			font-weight: bold;
+			font-family: inherit;
+			font-size: large;
+		}
+
+		.button1{
+			background-color: white;
+		    border-color: black;
+		    color: black;
+		    font-weight: bold;
+		    padding: 0.5px 2px;
+		    text-align: center;
+		    text-decoration: none;
+		    display: inline-block;
+		    font-size: 20px;
+		    margin: 2px 1px;
+		    cursor: pointer;
+		    border-radius: 4px;
+		    font-family: inherit;
+		    width:20%;
+		    margin-left: 5px;
+		}
+
+	</style>
+</head>
+<body>
+
+<img src="playground.png" alt="Playground" width="451" height="203" style="margin-left: 50px" >
+
+<div class="row">
+  	<div class="column1">
+  			<input type="file" name="datafile" size="40" style="margin-left: 150px">
+  			<img src="upload.png" width="300" height="300" style="margin-left: 100px; margin-top: 30px">
+
+  	</div>
+
+
+  	<div class="column2">
+  		<img src="arrow.png" width="232" height="214" style="margin-left: 100px; margin-top: 50px">
+     
+  	</div>
+
+  	<div class="column3">
+  		<img src="bug.png" width="222" height="170">
+  		<img src="nonbug.png" width="336" height="166">
+     
+  	</div>
+</div>
+
+</body>
+</html>

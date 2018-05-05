@@ -1,0 +1,246 @@
+
+<html>
+<head>
+	<style>
+		* {
+		    box-sizing: border-box;
+		}
+
+		/* Create two equal columns that floats next to each other */
+		.column1 {
+		    float: left;
+		    width: 20%;
+		    padding: 10px;
+		    margin-left: 50px;
+		}
+
+		.column2 {
+		    float: left;
+		    width: 60%;
+		    padding: 10px;
+		    margin-left: 5px;
+		}
+
+		/* Clear floats after the columns */
+		.row:after {
+		    content: "";
+		    display: table;
+		    clear: both;
+		}
+
+		.labels{
+			font-weight: bold;
+			font-family: inherit;
+			font-size: large;
+		}
+
+		.button1{
+			background-color: white;
+		    border-color: black;
+		    color: black;
+		    font-weight: bold;
+		    padding: 0.5px 2px;
+		    text-align: center;
+		    text-decoration: none;
+		    display: inline-block;
+		    font-size: 20px;
+		    margin: 2px 1px;
+		    cursor: pointer;
+		    border-radius: 4px;
+		    font-family: inherit;
+		    width:20%;
+		    margin-left: 5px;
+		}
+
+
+	</style>
+</head>
+<body>
+
+<img src="playground.png" alt="Playground" width="451" height="203" style="margin-left: 50px" >
+
+<div class="row">
+  	<div class="column1">
+  		<div style="margin-bottom: 25px">
+  			<label for="inputParameters" class="labels">Input Parameters</label>
+		  	<form action="/action_page.php" method="get">
+			  	<input type="checkbox" name="input" >LOC<br>
+			  	<input type="checkbox" name="input" >LLOC<br>
+			  	<input type="checkbox" name="input" >SLOC<br>
+			  	<input type="checkbox" name="input" >Halstead Volume<br>
+			  	<input type="checkbox" name="input" >Cyclomatic Complexity<br>
+			  	<input type="checkbox" name="input" >h<br>
+			  	<input type="checkbox" name="input" >N<br>
+			  	<input type="checkbox" name="input" >Calculated Length<br>
+			  	<input type="submit" value="ADD" class="button1">
+			</form>
+    	</div>
+
+    	<div style="margin-bottom: 25px">
+        	<label for="Epochs" class="labels">Number of Epochs</label>
+        	<div>
+        		<img src="play.png" id="img1" onclick=diffImage(this) >
+        		<script type="text/javascript">
+        			function diffImage(img) 
+					{
+					   if(img.src.match("pause.png")) img.src = "play.png";
+					   else img.src = "pause.png";
+					}
+        		</script>
+	        	<img src="step.png" alt="step" width="59" height="52" >
+
+        	</div>
+        </div>
+
+    	<div style="margin-bottom: 25px">
+    		<label for="learningRate" class="labels">Learning Rate</label>
+    		<div class="select">
+         	<select id="learningRate">
+        		<option value="0.00001">0.00001</option>
+            	<option value="0.0001">0.0001</option>
+            	<option value="0.001">0.001</option>
+            	<option value="0.003">0.003</option>
+            	<option value="0.01">0.01</option>
+            	<option value="0.03">0.03</option>
+            	<option value="0.1">0.1</option>
+            	<option value="0.3">0.3</option>
+            	<option value="1">1</option>
+            	<option value="3">3</option>
+            	<option value="10">10</option>
+          	</select>
+        </div>
+    	</div>
+
+        <div style="margin-bottom: 25px">
+        	<label for="BatchSize" class="labels">Batch Size</label>
+        	<div class="slidecontainer">
+				<input type="range" min="1" max="20" value="10" class="slider" id="myRange">
+				<span id="demo" class="labels"></span>
+				<script>
+					var slider = document.getElementById("myRange");
+					var output = document.getElementById("demo");
+					output.innerHTML = slider.value;
+
+					slider.oninput = function() {
+				  		output.innerHTML = this.value;
+					}
+				</script>
+			</div>
+        </div>
+     
+  </div>
+
+
+  <div class="column2" style="line-height: 0">
+  	<div>
+  		<img src="i1.png" width="47" height="47" style="margin-left: 50px" onclick=diffImage1(this) >
+        		<script type="text/javascript">
+        			function diffImage1(img) 
+					{
+					   if(img.src.match("alt.png")) img.src = "i1.png";
+					   else img.src = "alt.png";
+					}
+        		</script>
+        <img src="s1.png" width="122" height="57" >
+    	<img src="ha1.png" width="47" height="47" >
+    	<img src="y1.png" width="122" height="57" >
+  	</div>
+  	<div>
+  		<img src="i2.png" width="47" height="47" style="margin-left: 50px" onclick=diffImage2(this) >
+        		<script type="text/javascript">
+        			function diffImage2(img) 
+					{
+					   if(img.src.match("alt.png")) img.src = "i2.png";
+					   else img.src = "alt.png";
+					}
+        		</script>
+    	<img src="s2.png" width="122" height="47" >
+    	<img src="ha2.png" width="47" height="47" >
+    	<img src="y2.png" width="122" height="47" >
+  	</div>
+  	<div>
+  		<img src="i3.png" width="47" height="47" style="margin-left: 50px" onclick=diffImage3(this) >
+        		<script type="text/javascript">
+        			function diffImage3(img) 
+					{
+					   if(img.src.match("alt.png")) img.src = "i3.png";
+					   else img.src = "alt.png";
+					}
+        		</script>
+        <img src="s3.png" width="122" height="47" >
+    	<img src="ha3.png" width="47" height="47" >
+    	<img src="y3.png" width="122" height="47" >
+  	</div>
+  	<div>
+  		<img src="i4.png" width="47" height="47" style="margin-left: 50px" onclick=diffImage4(this) >
+        		<script type="text/javascript">
+        			function diffImage4(img) 
+					{
+					   if(img.src.match("alt.png")) img.src = "i4.png";
+					   else img.src = "alt.png";
+					}
+        		</script>
+        <img src="s4.png" width="122" height="47" >
+    	<img src="ha4.png" width="47" height="47" >
+    	<img src="y4.png" width="122" height="47" >
+    	<img src="o1.png" width="47" height="47" >
+  	</div>
+  	<div>
+  		<img src="i5.png" width="47" height="47" style="margin-left: 50px" onclick=diffImage5(this) >
+        		<script type="text/javascript">
+        			function diffImage5(img) 
+					{
+					   if(img.src.match("alt.png")) img.src = "i5.png";
+					   else img.src = "alt.png";
+					}
+        		</script>
+        <img src="s5.png" width="122" height="47" >
+    	<img src="ha5.png" width="47" height="47" >
+    	<img src="y5.png" width="122" height="47" >
+    	<img src="o2.png" width="47" height="47" >
+  	</div>
+  	<div>
+  		<img src="i6.png" width="47" height="47" style="margin-left: 50px" onclick=diffImage6(this) >
+        		<script type="text/javascript">
+        			function diffImage6(img) 
+					{
+					   if(img.src.match("alt.png")) img.src = "i6.png";
+					   else img.src = "alt.png";
+					}
+        		</script>
+    	<img src="s6.png" width="122" height="47" >
+    	<img src="ha6.png" width="47" height="47">
+    	<img src="y6.png" width="122" height="47" >
+  	</div>
+  	<div>
+  		<img src="i7.png" width="47" height="47" style="margin-left: 50px" onclick=diffImage7(this) >
+        		<script type="text/javascript">
+        			function diffImage7(img) 
+					{
+					   if(img.src.match("alt.png")) img.src = "i7.png";
+					   else img.src = "alt.png";
+					}
+        		</script>
+    	<img src="s7.png" width="122" height="47" >
+    	<img src="ha7.png" width="47" height="47"  >
+    	<img src="y7.png" width="122" height="47" >
+  	</div>
+    <div>
+    	<img src="i8.png" width="47" height="47" style="margin-left: 50px" onclick=diffImage8(this) >
+        		<script type="text/javascript">
+        			function diffImage8(img) 
+					{
+					   if(img.src.match("alt.png")) img.src = "i8.png";
+					   else img.src = "alt.png";
+					}
+        		</script>
+        <img src="s8.png" width="122" height="47" >
+    	<img src="ha8.png" width="47" height="47" >
+    	<img src="y8.png" width="122" height="47" >
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
